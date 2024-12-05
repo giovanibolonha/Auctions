@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Bolonha.Auctions.Processor-9bb6dbea-e90b-4537-acc3-b45d693f8786</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Microsoft.Data.SqlClient" Version="9.0.0" />
+    <PackageReference Include="Aspire.StackExchange.Redis" Version="9.0.0" />
+    <PackageReference Include="Aspire.RabbitMQ.Client" Version="9.0.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bolonha.Auctions.Application\Bolonha.Auctions.Application.csproj" />
+    <ProjectReference Include="..\Bolonha.Auctions.Dapper.Repository\Bolonha.Auctions.Dapper.Repository.csproj" />
+    <ProjectReference Include="..\Bolonha.Auctions.Redis.Repository\Bolonha.Auctions.Redis.Repository.csproj" />
+    <ProjectReference Include="..\Bolonha.Auctions.ServiceDefaults\Bolonha.Auctions.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>
